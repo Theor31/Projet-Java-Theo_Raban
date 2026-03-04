@@ -1,0 +1,61 @@
+@startuml
+title Coin-Coin Arena - Partie A (Héritage)
+
+interface Soignable {
+    + soigner(): void
+    + getPvActuels(): int
+    + getPvMax(): int
+}
+
+interface Combattant {
+    + attaquer(cible: CanardDeCombat): void
+    + estKO(): boolean
+}
+
+abstract class CanardDeCombat {
+    - nom: String
+    - surnom: String
+    - pvMax: int
+    - pvActuels: int
+    - atk: int
+    {static} - nbCanardsCrees: int
+    + CanardDeCombat(nom, pv, atk)
+    + subirDegats(d: int): void
+    + {abstract} getType(): String
+    + finDeTour(): void
+    -- Double Dispatch --
+    + etreAttaqueePar(a: CanardFeu): double
+    + etreAttaqueePar(a: CanardEau): double
+    + etreAttaqueePar(a: CanardPlante): double
+}
+
+class CanardFeu {
+    - intensite: double
+    + attaquer(cible: CanardDeCombat): void
+    + etreAttaqueePar(a: CanardEau): double
+}
+
+class CanardEau {
+    - pression: int
+    + attaquer(cible: CanardDeCombat): void
+    + etreAttaqueePar(a: CanardFeu): double
+}
+
+class CanardPlante {
+    + attaquer(cible: CanardDeCombat): void
+    + finDeTour(): void
+}
+
+class CanardConfus {
+    + attaquer(cible: CanardDeCombat): void
+}
+
+Soignable <|.. CanardDeCombat
+Combattant <|.. CanardDeCombat
+
+CanardDeCombat <|-- CanardFeu
+CanardDeCombat <|-- CanardEau
+CanardDeCombat <|-- CanardPlante
+CanardEau <|-- CanardConfus
+
+@enduml

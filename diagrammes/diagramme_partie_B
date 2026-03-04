@@ -1,0 +1,25 @@
+@startuml
+enum TypeCanard {
+    FEU
+    EAU
+    PLANTE
+    NORMAL
+    + getMultiplicateur(att, def): double
+}
+
+class EspeceTemplate {
+    - nomEspece: String
+    - pvBase: int
+    - atkBase: int
+}
+
+class Canard {
+    - surnom: String
+    - pvActuels: int
+    + setType(TypeCanard): void
+    + attaquer(Canard): void
+}
+
+Canard "n" o-- "1" EspeceTemplate : possède (Flyweight)
+Canard "1" --> "1" TypeCanard : est de type
+@enduml
