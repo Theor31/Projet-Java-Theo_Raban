@@ -1,3 +1,6 @@
+package PartieB;
+
+
 public class Canard implements Combattant, Soignable {
 
     private final EspeceCanard espece;

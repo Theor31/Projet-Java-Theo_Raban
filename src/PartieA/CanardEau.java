@@ -20,7 +20,7 @@ public class CanardEau extends CanardDeCombat {
 
     @Override
     public void attaquer(CanardDeCombat cible) {
-        System.out.println("💦 Jet d'eau (pression: " + pressionJet + ") !");
+        System.out.println("Jet d'eau (pression: " + pressionJet + ") !");
         double mult = cible.etreAttaqueePar(this);
         effectuerAttaque(cible, mult);
     }

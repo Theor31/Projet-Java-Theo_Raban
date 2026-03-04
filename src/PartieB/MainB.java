@@ -1,3 +1,5 @@
+package PartieB;
+
 public class MainB {
 
     public static void main(String[] args) {
@@ -5,20 +7,15 @@ public class MainB {
         EquipeB e1 = new EquipeB("Sacha");
         EquipeB e2 = new EquipeB("Ondine");
 
-        Canard gerard =
-                new Canard(EspeceCanard.CANARD_FLAMME, "Gérard");
+        Canard gerard = new Canard(EspeceCanard.CANARD_FLAMME, "Gérard");
 
-        Canard hubert =
-                new Canard(EspeceCanard.CANARD_MARIN, "Hubert");
+        Canard hubert = new Canard(EspeceCanard.CANARD_MARIN, "Hubert");
 
-        Canard marcel =
-                new Canard(EspeceCanard.CANARD_CLASSIQUE, "Marcel");
+        Canard marcel = new Canard(EspeceCanard.CANARD_CLASSIQUE, "Marcel");
 
-        Canard fernand =
-                new Canard(EspeceCanard.CANARD_MOUSSE, "Fernand");
+        Canard fernand = new Canard(EspeceCanard.CANARD_MOUSSE, "Fernand");
 
-        Canard colette =
-                new Canard(EspeceCanard.CANARD_MOUSSE, "Colette");
+        Canard colette = new Canard(EspeceCanard.CANARD_MOUSSE, "Colette");
 
         e1.ajouter(gerard);
         e1.ajouter(fernand);

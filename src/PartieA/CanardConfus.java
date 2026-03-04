@@ -1,3 +1,5 @@
+package PartieA;
+
 import java.util.Random;
 
 public class CanardConfus extends CanardEau {

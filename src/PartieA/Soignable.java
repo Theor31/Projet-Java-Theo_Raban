@@ -1,3 +1,5 @@
+package PartieA;
+
 public interface Soignable {
 
     void soigner();

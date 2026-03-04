@@ -31,6 +31,5 @@ public class AreneB {
         else
             System.out.println("Victoire de " + e1.getNomDresseur());
     }
-} {
+} 
     
-}

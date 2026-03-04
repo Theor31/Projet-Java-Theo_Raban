@@ -1,3 +1,5 @@
+package PartieA;
+
 public class CanardClassique extends CanardDeCombat {
 
     public CanardClassique(String surnom) {

@@ -1,3 +1,6 @@
+package PartieB;
+
+
 public class EquipeB {
 
     private Canard[] equipe = new Canard[6];

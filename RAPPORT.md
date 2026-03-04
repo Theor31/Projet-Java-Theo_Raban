@@ -3,6 +3,7 @@
 ## Section 1 - Modélisation par héritage
 
 ### Architecture globale partie A
+
 ![Diagramme Architecture partie A](diagrammes/DiagrammeA.png)
 
 ### R1 : Duplication des données 

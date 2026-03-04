@@ -1,3 +1,5 @@
+package PartieB;
+
 public class EspeceCanard {
 
     private final String nom;
